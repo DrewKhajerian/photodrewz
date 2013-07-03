@@ -2,11 +2,17 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 gem 'jquery-rails'
-gem 'sqlite3'
 
 gem 'devise'
-gem 'simple_form'
+# gem 'simple_form' -> used for pins
 
+group :development do
+	gem 'sqlite3'
+end
+
+group :production do
+	gem 'pg'
+end
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
