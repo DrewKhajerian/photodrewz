@@ -18,6 +18,7 @@ test:
   pool: 5
   timeout: 5000
 
+# need this so that db works with heroku
 production:
   adapter: postgresql
   database: photodrewz
