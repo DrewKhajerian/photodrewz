@@ -7,6 +7,6 @@ Photodrewz::Application.routes.draw do
   get 'pictures/new' => 'pictures#new'
   get 'pictures/:id' => 'pictures#show', as: "picture"
 
-  root :to => 'home#index'
+  root :to => 'pictures#index'
 
 end
