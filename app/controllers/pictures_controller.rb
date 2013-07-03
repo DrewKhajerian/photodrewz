@@ -23,6 +23,20 @@ class PicturesController < ApplicationController
 	    render :new
   	end
 
+  	def edit
+  		@picture = Picture.find(params[:id])
+  	end
+
+  	def update
+  		@picture = Picture.find(params[:id])
+
+  		if @picture.update_attributes(params[:picture])
+  			redirect_to "/pictures/#{@picture.id}"
+  		else
+  			render :edit
+  		end
+  	end
+
   end
 
 end
