@@ -1,0 +1,27 @@
+$baseFontFamily: Oxygen;
+@import url(http://fonts.googleapis.com/css?family=Oxygen);
+
+$btnPrimaryBackground: orange;
+/*$navbarLinkColor: white;*/
+$navbarBackground: white;
+
+@import 'bootstrap';
+
+@import 'bootstrap-responsive';
+
+
+.navbar-inner {
+	/*remove default shadow from nav bar*/
+	@include box-shadow(none !important);
+	border: 0;
+}
+
+.main-body {
+	padding-left: 30px;
+}
+
+img {width: 700px;}
+
+footer p {
+	padding-left: 30px;
+}

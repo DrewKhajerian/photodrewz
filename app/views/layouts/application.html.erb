@@ -5,6 +5,8 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <!-- tag makes it responsive on mobile devise -->
+  <%= tag :meta, name: "viewport", content: "width=device-width, initial-scale=1.0" %>
 </head>
 	<body>
 
@@ -14,7 +16,11 @@
 	    <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
     <% end %>
 
-		<%= yield %>
+    <div class="main-body">
+
+			<%= yield %>
+
+		</div>
 		
 		<%= render 'layouts/footer' %>
 
