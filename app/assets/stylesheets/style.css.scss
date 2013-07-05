@@ -21,22 +21,23 @@ span.brand {
 }
 
 ul li {
-	margin-top: 8px;
+	margin-top: 10px;
 }
 
 .main-body {
 	padding-left: 30px;
 }
 
-.pic-body {
-	display: inline-block;
-	width: 500px;
-	position: absolue;
+div.pic-body {
+	width: 450px;
 }
 
-#show-pic {
-	margin-left: auto;
-	margin-right: auto;
+div.pic-body ul li {
+	list-style: none;
+}
+
+div.pic-body ul li div{
+	display:inline-block;
 }
 
 img {

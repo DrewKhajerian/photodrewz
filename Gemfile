@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.13'
 gem 'jquery-rails'
 
+# gem "paperclip", "~> 3.0"
+
 gem 'devise'
 # gem 'simple_form' -> used for pins
 
