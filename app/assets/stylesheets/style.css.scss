@@ -9,11 +9,19 @@ $navbarBackground: white;
 
 @import 'bootstrap-responsive';
 
+span.brand {
+	font-family:cursive;
+	color:#e88121;
+}
 
 .navbar-inner {
 	/*remove default shadow from nav bar*/
 	@include box-shadow(none !important);
 	border: 0;
+}
+
+ul li {
+	margin-top: 8px;
 }
 
 .main-body {

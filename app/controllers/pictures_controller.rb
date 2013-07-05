@@ -24,28 +24,27 @@ class PicturesController < ApplicationController
 	    # otherwise render the view associated with the action :new (i.e. new.html.erb)
 	    render :new
   	end
-
-  	def edit
-  		@picture = Picture.find(params[:id])
-      @edit_view = true
-  	end
-
-  	def update
-  		@picture = Picture.find(params[:id])
-
-  		if @picture.update_attributes(params[:picture])
-  			redirect_to "/pictures/#{@picture.id}"
-  		else
-  			render :edit
-  		end
-  	end
-
-  	def destroy
-  		@picture = Picture.find(params[:id])
-  		@picture.destroy
-  		redirect_to pictures_url
-  	end
-
   end
+
+	def edit
+		@picture = Picture.find(params[:id])
+    @edit_view = true
+	end
+
+	def update
+		@picture = Picture.find(params[:id])
+
+		if @picture.update_attributes(params[:picture])
+			redirect_to "/pictures/#{@picture.id}"
+		else
+			render :edit
+		end
+	end
+
+	def destroy
+		@picture = Picture.find(params[:id])
+		@picture.destroy
+		redirect_to pictures_url
+	end
 
 end
