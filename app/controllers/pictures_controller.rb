@@ -27,6 +27,7 @@ class PicturesController < ApplicationController
 
   	def edit
   		@picture = Picture.find(params[:id])
+      @edit_view = true
   	end
 
   	def update
@@ -39,7 +40,7 @@ class PicturesController < ApplicationController
   		end
   	end
 
-  	def delete
+  	def destroy
   		@picture = Picture.find(params[:id])
   		@picture.destroy
   		redirect_to pictures_url

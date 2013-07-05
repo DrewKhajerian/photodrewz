@@ -1,8 +1,9 @@
 <h1>Pictures (<%= @pictures.length %>)</h1>
-
-	<% @pictures.each do |picture| %>
-		<div class="well">
-			<img class="pictures" src="<%= picture[:url] %>">
-			<p><%= picture[:title] %>, <%= picture[:artist] %></p>
-		</div>
-	<% end %>
+	<div class="pic-body">
+		<% @pictures.each do |picture| %>
+			<div class="well">
+				<p><%= picture[:title] %>, <%= picture[:artist] %></p>
+				<%= link_to (image_tag picture[:url]), "pictures/#{picture.id}" %>
+			</div>
+		<% end %>
+	</div>

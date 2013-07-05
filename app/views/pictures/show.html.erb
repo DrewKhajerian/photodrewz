@@ -1,2 +1,6 @@
-<img src="<%= @picture[:url] %>">
-<p><%= @picture[:title] %>, <%= @picture[:atist] %></p>
+<div id="show-pic" class="pic-body">
+	<div class="well">
+		<p><%= @picture[:title] %>, <%= @picture[:artist] %></p>
+		<img src="<%= @picture[:url] %>">
+	</div>
+</div>
